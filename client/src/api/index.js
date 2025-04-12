@@ -2,7 +2,7 @@ import axios from "axios";
 
 // http://localhost:8080/api/
 const API = axios.create({
-  baseURL: "https://ai-image-generator-seven-alpha.vercel.app/api/",
+  baseURL: "https://ai-image-generator-eta-gray.vercel.app/api/",
 });
 
 export const GetPosts = async () => await API.get("/post/");
