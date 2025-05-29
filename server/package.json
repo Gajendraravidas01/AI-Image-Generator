@@ -11,11 +11,14 @@
   "author": "Gajendra Kumar",
   "license": "ISC",
   "dependencies": {
+    "@google/genai": "^1.2.0",
     "@huggingface/inference": "^3.3.6",
+    "axios": "^1.8.4",
     "cloudinary": "^2.5.1",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
+    "form-data": "^4.0.2",
     "mongoose": "^8.9.5",
     "nodemon": "^3.1.9",
     "openai": "^4.80.1"

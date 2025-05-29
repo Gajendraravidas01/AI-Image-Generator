@@ -30,7 +30,7 @@ const Wrapper = styled.div`
 `;
 
 const Post = () => {
-  const [generateImageLoading, setGenerateImageLoaidng] = useState(false);
+  const [generateImageLoading, setGenerateImageLoading] = useState(false);
   const [createpostloading,setCreatePostLoading] = useState(false);
   const [post,setPost] = useState({
     name : "",
@@ -44,7 +44,7 @@ const Post = () => {
         createpostloading={createpostloading}
         setCreatePostLoading={setCreatePostLoading}
         generateImageLoading={generateImageLoading}
-        setGenerateImageLoaidng={setGenerateImageLoaidng}
+        setGenerateImageLoading={setGenerateImageLoading}
         post={post}
         setPost={setPost}
       />

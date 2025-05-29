@@ -24,19 +24,20 @@ const Image = styled.img`
 `;
 
 const GenerateImageCard = ({src,loading}) => {
+  console.log("src",src) ;
   return (
     <Container>
       {loading ? (
-        <>
+        <React.Fragment>
           <CircularProgress
             sx={{ color: "inherit", width: "24px", height: "24px" }}
           />
           Generating Your Image . . .
-        </>
+        </React.Fragment>
       ) : src ? (
         <Image src={src} />
       ) : (
-        <>Write a prompt to generate image</>
+        <React.Fragment>Write a prompt to generate image</React.Fragment>
       )}
     </Container>
   )

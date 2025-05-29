@@ -52,7 +52,7 @@ const GanerateImage = ({
     createpostloading,
     setCreatePostLoading,
     generateImageLoading,
-    setGenerateImageLoaidng,
+    setGenerateImageLoading,
     post,
     setPost
 }) => {
@@ -60,18 +60,22 @@ const GanerateImage = ({
     const [error,setError] = useState("");
 
     const generateImage = async () => {
-        setGenerateImageLoaidng(true)
-        setError("");
-        await GenerateImageFromPrompt({prompt: post.prompt})
-        .then(() => {
-          setPost({...post,photo:response.data.imageUrl})
-          setGenerateImageLoaidng(false);
+      setGenerateImageLoading(true);
+      setError("");
+      await GenerateImageFromPrompt({ prompt: post.prompt })
+        .then((res) => {
+          console.log("res",res);
+          setPost({
+            ...post,
+            photo: `${res?.data?.imageUrl}`,
+          });
+          setGenerateImageLoading(false);
         })
         .catch((error) => {
-            setError(error?.response?.data?.message)
-            setGenerateImageLoaidng(false)
-        })
-    }
+          setError(error?.response?.data?.message);
+          setGenerateImageLoading(false);
+        });
+    };
     const createpost = async () => {
         setCreatePostLoading(true);
         setError("");
