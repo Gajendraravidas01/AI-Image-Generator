@@ -36,7 +36,7 @@ const Navbar = () => {
   return (
     <Container>
       <Link to={"/"} style={{ textDecoration: "none", color: "inherit" }}>
-        GkrAI
+        DreamFrame
       </Link>
       {path[1] === "post" ? (
         <Button
